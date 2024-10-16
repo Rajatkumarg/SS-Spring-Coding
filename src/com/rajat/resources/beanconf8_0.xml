@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	<bean class="com.rajat.beans7.Student" id="stdObj" scope="singleton"> <!-- scope = "singleton" is bidefault scope-->
+		<property name="roll" value="1" />
+		<property name="Name" value="Rajat" />
+	</bean>
+	
+	<bean class="com.rajat.beans7.Student" id="stdObj2" scope="prototype">
+		<property name="roll" value="5" />
+		<property name="Name" value="Muti" />
+	</bean>
+	
+	<bean class="com.rajat.beans7.Address" id="addrObj" scope="prototype">
+		<property name="houseNo" value="50" />
+		<property name="locality" value="Sarai" />
+		<property name="city" value="Buxar"/>
+	</bean>
+	<bean class="com.rajat.beans7.Student" id="stdObj3">
+		<property name="roll" value="5" />
+		<property name="Name" value="Muti" />
+		<property name="address" ref="addrObj"></property>
+	</bean>
+	
+
+</beans>

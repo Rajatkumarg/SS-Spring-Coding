@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean class="com.rajat.beans2.Student" id="stdObj"> 
+		<property name="name" value="Amit"/>
+		<property name="rollno" value="101"/>
+	</bean>
+	<bean class="com.rajat.beans2.Student" id="stdObj1"> 
+		<property name="name" value="Amit"/>
+		<property name="rollno" value="101"/>
+	</bean>
+	<bean class="com.rajat.beans2.Student" id="stdObj2"> 
+		<property name="name" value="Ravi"/>
+		<property name="rollno" value="102"/>
+	</bean>
+	<bean class="com.rajat.beans2.Student" name="stdObj3"> 
+		<property name="name" value="Rajat"/>
+		<property name="rollno" value="103"/>
+	</bean>
+	<bean class="com.rajat.beans2.Student" name="stdObj4,stdObj5"> 
+		<property name="name" value="Nishant"/>
+		<property name="rollno" value="104"/>
+	</bean>
+	<bean class="com.rajat.beans2.Programmer" name="prObj"> 
+		<property name="name" value="Rajat"/>
+	</bean>
+	<bean class="com.rajat.beans2.Laptop" id="lpObj"> 
+		<property name="brand" value="Dell"/>
+	</bean>
+
+
+</beans>

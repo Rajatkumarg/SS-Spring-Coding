@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.rajat.beans5.Address" id="addrObj1">
+		<constructor-arg value="101" type="int"></constructor-arg>
+		<constructor-arg value="Sarai"></constructor-arg>
+		<constructor-arg value="Buxar"></constructor-arg>
+	</bean>
+
+	<bean id="stdObj1" class="com.rajat.beans5.Student">
+		<constructor-arg value="Rajat"></constructor-arg>
+		<constructor-arg value="101"></constructor-arg>
+		<constructor-arg ref="addrObj1" type="com.rajat.beans5.Address"></constructor-arg>
+	</bean>
+
+	<!-- OR Using inner bean-->
+
+	<bean id="stdObj2" class="com.rajat.beans5.Student">
+		<constructor-arg value="Rajat"></constructor-arg>
+		<constructor-arg value="101"></constructor-arg>
+		<constructor-arg>
+			<bean class="com.rajat.beans5.Address" id="addrObj1">
+				<constructor-arg value="102" type="int"></constructor-arg>
+				<constructor-arg value="Sarai"></constructor-arg>
+				<constructor-arg value="Buxar"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="hb" class="com.rajat.beans5.Husband">
+		<property name="name" value="Vinod"></property>
+		<property name="wife" ref="wf"></property>
+	</bean>
+	<bean id="wf" class="com.rajat.beans5.Wife">
+		<property name="name" value="Neha"></property>
+		<property name="husband" ref="hb"></property>
+	</bean>
+
+</beans>

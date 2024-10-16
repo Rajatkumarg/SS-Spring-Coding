@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="com.rajat.beans10.Account" id="accobj">
+		<property name="acctId" value="SV-110" />
+		<property name="balance" value="100000.0" />
+	</bean>
+	<bean class="com.rajat.beans10.Address" id="addobj">
+		<property name="houseNo" value="10" />
+		<property name="city" value="Buxar" />
+	</bean>
+	<bean id="custObj" class="com.rajat.beans10.Customer"
+		autowire="constructor">
+		<constructor-arg index="0" value="Rajat" />
+		<constructor-arg index="1" value="25" />
+	</bean>
+
+
+
+</beans>

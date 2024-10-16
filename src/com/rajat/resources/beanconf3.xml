@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean class="com.rajat.beans4.Laptop" id="lpObj"> 
+	 </bean>
+	 <bean class="com.rajat.beans4.Desktop" id="dpObj"> 
+	 </bean>
+	<bean class="com.rajat.beans4.Programmer" name="prObj1"> 
+		<property name="comp" ref="lpObj"/>
+	</bean>
+	<bean class="com.rajat.beans4.Programmer" name="prObj2"> 
+		<property name="comp" ref="dpObj"/>
+	</bean>
+	
+</beans>

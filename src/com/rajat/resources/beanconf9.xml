@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	<bean class="com.rajat.beans9.Account" id="accobj" primary="true"> 
+        <property name="acctId" value="SV-110" />
+        <property name="balance" value="100000.0" />
+	</bean>
+	<bean class="com.rajat.beans9.Account" id="myacc"> 
+        <property name="acctId" value="SV-120" />
+        <property name="balance" value="120000.0" />
+	</bean>
+	<bean id="custObj" class="com.rajat.beans9.Customer" autowire="constructor">
+         <property name="name" value="Dheeraj" />
+	</bean>
+
+	
+
+</beans>

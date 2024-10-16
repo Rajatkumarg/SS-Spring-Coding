@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+	<!-- bean definitions here -->
+	<bean class="com.rajat.beans4.Student" id="stdObj2">
+		<property name="name" value="Nishant" />
+		<property name="rollno" value="1"></property>
+		<property name="subjects">
+			<array>
+				<value>Physics</value>
+				<value>Chemistry</value>
+				<value>Maths</value>
+			</array>
+		</property>
+		<property name="subjectList">
+			<list>
+				<value>Phy</value>
+				<value>Chem</value>
+				<value>Maths</value>
+			</list>
+		</property>
+		<property name="marks">
+			<list>
+				<value>98</value>
+				<value>99</value>
+				<value>100</value>
+			</list>
+		</property>
+		<property name="mobileNo">
+			<util:list id="marks" list-class="java.util.LinkedList">
+				<value>9999999999</value>
+				<value>8888888888</value>
+				<value>7777777777</value>
+			</util:list>
+		</property>
+		<property name="emialsInIncOrder">
+			<util:set set-class="java.util.TreeSet">
+						<value>def@gmail.com</value>
+						<value>abc@gmail.com</value>
+						<value>ghi@gmail.com</value>
+			</util:set>
+		</property>
+		<property name="subjectMarksMapAsc">
+			<util:map map-class="java.util.TreeMap">
+				<entry key="JSE" value="98"/>
+				<entry key="C" value="95"/>
+				<entry key="JEE" value="91"/>
+				<entry key="C++" value="99"/>
+				<entry key="Spring" value="100"/>
+			</util:map>
+		</property>
+	</bean>
+</beans> 

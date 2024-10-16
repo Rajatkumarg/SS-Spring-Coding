@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	
+	<!-- <bean class="com.rajat.beans8.Account" id="acc">  In case of autowire="byName" , id must be same as variable name i.e acc --> 
+      <bean class="com.rajat.beans8.Account" id="accId1">   <!-- In case of autowire="byType" , id name can be diff -->
+        <property name="acctId" value="SV-101" />
+        <property name="balance" value="50000.0" />
+	</bean>
+	<bean class="com.rajat.beans8.Account" id="accId2" autowire-candidate="false"> <!-- by default it is true. Now this bean is not considered for autowiring bcz it is false --> 
+        <property name="acctId" value="SV-102" />
+        <property name="balance" value="60000.0" />
+	</bean>
+	<bean class="com.rajat.beans8.Account" id="accId3" primary="true"> <!-- now this only will picked up for autowiring --> 
+        <property name="acctId" value="SV-103" />
+        <property name="balance" value="70000.0" />
+	</bean>
+	<bean id="custObj" class="com.rajat.beans8.Customer" autowire="byType"><!-- bydefault autowire="no" -->
+         <property name="name" value="Dheeraj" />
+	</bean>
+
+	
+
+</beans>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.rajat.beans6.Address" id="addrObj">
+		<property name="houseNo" value="11" />
+		<property name="locality" value="Sarai" />
+		<property name="city" value="Buxar" />
+	</bean>
+
+	<bean class="com.rajat.beans6.Student" id="stdObj1" p:roll="101"
+		p:name="Rajat" />
+	<bean class="com.rajat.beans6.Student" id="stdObj2" p:roll="102"
+		p:name="Nishant" p:address-ref="addrObj" />
+
+	<bean class="com.rajat.beans6.Student" id="stdObj3" c:roll="103"
+		c:name="Muti" />
+	<!-- OR -->
+	<bean class="com.rajat.beans6.Student" id="stdObj4" c:_1="104" c:_0="CK" />
+
+	<bean class="java.util.Date" id="dateOfBirth">
+		<property name="date" value="22" />
+		<property name="month" value="10" />
+		<property name="year" value="107" />
+	</bean>
+
+	<bean class="com.rajat.beans6.Student" id="stdObj5">
+		<constructor-arg name="name" value="Gujju" />
+		<constructor-arg name="roll" value="13" />
+		<constructor-arg name="dob" ref="dateOfBirth"/>
+	</bean>
+	<bean class="com.rajat.beans6.Student" id="stdObj6">
+		<constructor-arg name="name" value="Kabbu" />
+		<constructor-arg name="roll" value="14" />
+		<constructor-arg name="dob"><null/></constructor-arg>
+	</bean>
+</beans>

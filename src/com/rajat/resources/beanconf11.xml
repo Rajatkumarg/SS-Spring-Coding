@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="com.rajat.beans11.Car" id="carObj" init-method="startCar" destroy-method="stopCar"> 
+    	<property name="model" value="Audi-Q7"/> 
+	</bean>
+	
+	<bean class="com.rajat.beans11.Laptop" id="laptopObj">
+		<property name="model" value="Dell"></property>
+	</bean>
+	
+	<bean class="com.rajat.beans11.Bike" id="bikeObj">
+		<property name="model" value="FZ"></property>
+	</bean>
+
+	<bean class="com.rajat.beans11.Cycle" id="cycleObj" scope="prototype" init-method="startCycle" destroy-method="stopCycle"> 
+    	<property name="model" value="Hero"/> 
+	</bean>
+</beans>
